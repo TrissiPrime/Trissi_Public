@@ -18,10 +18,9 @@
       --accent-2:#f0d99d;
       --accent-rgb:214,180,106;
       --engineering-rgb:0,210,190;
-      --software-rgb:157,108,255;
+      --digital-rgb:157,108,255;
       --data-rgb:45,245,164;
       --line:rgba(255,255,255,.11);
-      --radius:30px;
       --radius-lg:44px;
       --shadow:0 36px 120px rgba(0,0,0,.58);
       --ease:cubic-bezier(.2,.8,.2,1);
@@ -42,7 +41,7 @@
       background:
         radial-gradient(circle at 50% -20%,rgba(var(--accent-rgb),.22),transparent 32rem),
         radial-gradient(circle at 12% 18%,rgba(var(--engineering-rgb),.08),transparent 30rem),
-        radial-gradient(circle at 88% 16%,rgba(var(--software-rgb),.09),transparent 32rem),
+        radial-gradient(circle at 88% 16%,rgba(var(--digital-rgb),.09),transparent 32rem),
         radial-gradient(circle at 50% 105%,rgba(var(--data-rgb),.055),transparent 28rem),
         linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 42%,var(--bg-3) 100%);
       overflow-x:hidden;
@@ -75,7 +74,7 @@
           transparent 96deg,
           rgba(var(--engineering-rgb),.045) 160deg,
           transparent 220deg,
-          rgba(var(--software-rgb),.045) 286deg,
+          rgba(var(--digital-rgb),.045) 286deg,
           transparent 360deg);
       filter:blur(44px);
       opacity:.88;
@@ -87,8 +86,7 @@
       position:fixed;
       inset:0;
       pointer-events:none;
-      background:
-        radial-gradient(circle at 50% 46%,transparent 0%,rgba(0,0,0,.28) 58%,rgba(0,0,0,.72) 100%);
+      background:radial-gradient(circle at 50% 46%,transparent 0%,rgba(0,0,0,.28) 58%,rgba(0,0,0,.72) 100%);
       z-index:-1;
     }
 
@@ -96,8 +94,7 @@
       position:fixed;
       inset:0;
       pointer-events:none;
-      background:
-        linear-gradient(to bottom,transparent,rgba(255,255,255,.035),transparent);
+      background:linear-gradient(to bottom,transparent,rgba(255,255,255,.035),transparent);
       height:26vh;
       opacity:.24;
       animation:scan 7.5s ease-in-out infinite;
@@ -184,13 +181,13 @@
       border:1px solid rgba(255,255,255,.08);
     }
 
-    .brand-mark span{
-      font-weight:950;
-      font-size:1.55rem;
-      letter-spacing:-.08em;
-      color:var(--accent-2);
-      transform:translateX(-1px);
-      text-shadow:0 0 24px rgba(var(--accent-rgb),.28);
+    .brand-mark img{
+      width:34px;
+      height:34px;
+      object-fit:contain;
+      display:block;
+      position:relative;
+      z-index:1;
     }
 
     .brand-name{
@@ -406,7 +403,7 @@
       inset:-34%;
       background:
         radial-gradient(circle,rgba(var(--accent-rgb),.24),transparent 32%),
-        conic-gradient(from 180deg,transparent,rgba(var(--accent-rgb),.18),transparent,rgba(var(--engineering-rgb),.08),transparent,rgba(var(--software-rgb),.08),transparent);
+        conic-gradient(from 180deg,transparent,rgba(var(--accent-rgb),.18),transparent,rgba(var(--engineering-rgb),.08),transparent,rgba(var(--digital-rgb),.08),transparent);
       filter:blur(20px);
       animation:spin 20s linear infinite;
       z-index:-4;
@@ -458,7 +455,7 @@
 
     .ring:nth-child(4){
       width:88%;
-      border-color:rgba(var(--software-rgb),.08);
+      border-color:rgba(var(--digital-rgb),.08);
       animation-duration:19s;
       animation-direction:alternate-reverse;
     }
@@ -484,8 +481,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:
-        linear-gradient(120deg,transparent,rgba(255,255,255,.09),transparent);
+      background:linear-gradient(120deg,transparent,rgba(255,255,255,.09),transparent);
       transform:translateX(-140%);
       animation:revealSweep 6.5s ease-in-out infinite;
     }
@@ -502,11 +498,6 @@
       box-shadow:
         inset 0 1px 0 rgba(255,255,255,.11),
         0 0 70px rgba(var(--accent-rgb),.13);
-      color:var(--accent-2);
-      font-weight:950;
-      font-size:5.2rem;
-      letter-spacing:-.14em;
-      text-indent:-.18em;
       animation:float 4.8s ease-in-out infinite;
       position:relative;
     }
@@ -518,6 +509,15 @@
       border-radius:40px;
       border:1px solid rgba(var(--accent-rgb),.10);
       animation:breath 3.8s ease-in-out infinite;
+    }
+
+    .symbol img{
+      width:92px;
+      height:92px;
+      object-fit:contain;
+      display:block;
+      position:relative;
+      z-index:1;
     }
 
     .date{
@@ -689,6 +689,11 @@
         border-radius:16px;
       }
 
+      .brand-mark img{
+        width:30px;
+        height:30px;
+      }
+
       .brand-name{font-size:.92rem}
       .brand-line{font-size:.78rem}
       .status-badge{font-size:.72rem}
@@ -725,7 +730,11 @@
       .symbol{
         width:124px;
         height:124px;
-        font-size:4.1rem;
+      }
+
+      .symbol img{
+        width:76px;
+        height:76px;
       }
 
       .code-lines{
@@ -758,7 +767,9 @@
   <div class="page">
     <header class="topbar">
       <a class="brand" href="#" aria-label="TRISSI Startseite">
-        <div class="brand-mark" aria-hidden="true"><span>T</span></div>
+        <div class="brand-mark" aria-hidden="true">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL8AAADgCAYAAABSMrckAAAEoUlEQVR4nO3d2XLaShRAUXDl/3+Z++RcDzgG1Jp6r/WUuFyxFPZpNaOvt9vtcsfdL8LJXT/+5e3ONwifWX1q+2v8wmd2fxt/u/dFmNztcvk/fuFTc7u354cE8ZP1drHlIcrKT5b4yRI/WeInS/xkiZ8s8ZMlfrLET9afgf/W9fdvgSGGvCrBys8ZDVloR8Vv1ed0rPxkiZ8s8ZMlfrLET5b4yRI/WeInS/xkiZ8s8ZMlfrLET5b4yRI/WeInS/xkiZ8s8ZM1Kn6f8c/pWPk5oyGL7cjP7Smu/kf51Iri//1iI+Mveo9ujyEQ/EK2PWPcLtvGKPwBxD/WFlEKfxDxn4vwBxL/eAI9CfGTJf7zcEUZTPxkiZ+st8txnqWETVn5yRI/Vdf3+G19yPm48hsAKq6Xy/dtjwFgdn8bv7fnNwDM6Hr50vZPr+evDkDlWdTq7fuJR3s+K0RROMeHiL9F+B+InyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEv93Psk4Qvxkif8+q3+A+H9mACYn/n/79kvMmIf4H2MIJiT+5xiAiYj/ea4CkxD/6wzByYl/OQNwUuIfw1XghP7sfQCTMQAnYuUnS/xkiZ8s8ZMlfrLET5aHOr+7ffizhy4nZuX/t9vl8zAwEfE/xgBMSPyPcxWYjPifZwgmIf7XGYCTE/8yrgInJv4xDMEJiX8sA3Ai4h/PAJyE+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZIn/u+veB8A2xE+W+MkSf4ft3Bfiv08oAeL/2UwDMNO5DCP+f5shmhnOYRV/9j6AE3iP57brUTxP9L8Q/+POMgSif5Btz/OOHNeRj+1wrPyvOdpVQPQvEP8yew+B6Bew7Rlj6wivO/zM6Yh/nK2CFP0gtj3jrRWn6Aez8pMlfrLET5b4yXKH9/Nj9JU7lcVz/qYa/09PSs0cxW/nPNv5/qoY/6PPxs4SRe18H1bb87/yMoSjvH7nWbdL63yfVop/yY36akh7OdOx7qYU/whHH4JRx3fkcxymsucffWMebX+ciHU0K/8ye0d39CvRoYl/ub0CXPtnTj9UlW3PFrbaCk0f5VbEP95aQyD6wWx71jMqVvv6lYh/XUvDFf2KbHu2IeIDsvKTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLG9m2c4z7+n15pcNWPm38eyb2f22xQ1Y+de1NOC9f8/v1MS/jtGrtiFYgW3PWGtvV2yFBhL/OFuF6f7AILY9y+0V4tpboekHrLLyr3FDHmUFPspxnE4l/pGOGtsRj+nQxP+cowc2ajCPfp5DlOJfcoMedbX/yZLjPdN5LlKK/3LpPdP6yvlmFB/teeRRkpkiePRRoZnO+SH/AcJ+ZP9isKrAAAAAAElFTkSuQmCC" alt="">
+        </div>
         <div>
           <div class="brand-name">TRISSI</div>
           <div class="brand-line">Problem? Hol dir einen Trissi.</div>
@@ -828,7 +839,9 @@
           </div>
 
           <div class="core">
-            <div class="symbol" aria-hidden="true">T</div>
+            <div class="symbol" aria-hidden="true">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL8AAADgCAYAAABSMrckAAAEoUlEQVR4nO3d2XLaShRAUXDl/3+Z++RcDzgG1Jp6r/WUuFyxFPZpNaOvt9vtcsfdL8LJXT/+5e3ONwifWX1q+2v8wmd2fxt/u/dFmNztcvk/fuFTc7u354cE8ZP1drHlIcrKT5b4yRI/WeInS/xkiZ8s8ZMlfrLET9afgf/W9fdvgSGGvCrBys8ZDVloR8Vv1ed0rPxkiZ8s8ZMlfrLET5b4yRI/WeInS/xkiZ8s8ZMlfrLET5b4yRI/WeInS/xkiZ8s8ZM1Kn6f8c/pWPk5oyGL7cjP7Smu/kf51Iri//1iI+Mveo9ujyEQ/EK2PWPcLtvGKPwBxD/WFlEKfxDxn4vwBxL/eAI9CfGTJf7zcEUZTPxkiZ+st8txnqWETVn5yRI/Vdf3+G19yPm48hsAKq6Xy/dtjwFgdn8bv7fnNwDM6Hr50vZPr+evDkDlWdTq7fuJR3s+K0RROMeHiL9F+B+InyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEv93Psk4Qvxkif8+q3+A+H9mACYn/n/79kvMmIf4H2MIJiT+5xiAiYj/ea4CkxD/6wzByYl/OQNwUuIfw1XghP7sfQCTMQAnYuUnS/xkiZ8s8ZMlfrLET5aHOr+7ffizhy4nZuX/t9vl8zAwEfE/xgBMSPyPcxWYjPifZwgmIf7XGYCTE/8yrgInJv4xDMEJiX8sA3Ai4h/PAJyE+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZIn/u+veB8A2xE+W+MkSf4ft3Bfiv08oAeL/2UwDMNO5DCP+f5shmhnOYRV/9j6AE3iP57brUTxP9L8Q/+POMgSif5Btz/OOHNeRj+1wrPyvOdpVQPQvEP8yew+B6Bew7Rlj6wivO/zM6Yh/nK2CFP0gtj3jrRWn6Aez8pMlfrLET5b4yXKH9/Nj9JU7lcVz/qYa/09PSs0cxW/nPNv5/qoY/6PPxs4SRe18H1bb87/yMoSjvH7nWbdL63yfVop/yY36akh7OdOx7qYU/whHH4JRx3fkcxymsucffWMebX+ciHU0K/8ye0d39CvRoYl/ub0CXPtnTj9UlW3PFrbaCk0f5VbEP95aQyD6wWx71jMqVvv6lYh/XUvDFf2KbHu2IeIDsvKTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLG9m2c4z7+n15pcNWPm38eyb2f22xQ1Y+de1NOC9f8/v1MS/jtGrtiFYgW3PWGtvV2yFBhL/OFuF6f7AILY9y+0V4tpboekHrLLyr3FDHmUFPspxnE4l/pGOGtsRj+nQxP+cowc2ajCPfp5DlOJfcoMedbX/yZLjPdN5LlKK/3LpPdP6yvlmFB/teeRRkpkiePRRoZnO+SH/AcJ+ZP9isKrAAAAAAElFTkSuQmCC" alt="">
+            </div>
             <div class="date"><span>01</span>.07.</div>
             <p>TRISSI geht online.</p>
           </div>
