@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRISSI – Technische Probleme</title>
+  <meta name="description" content="Die TRISSI Website ist aktuell wegen technischer Probleme vorübergehend nicht erreichbar.">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root{
+      --bg:#07090d;
+      --bg-2:#0b0f16;
+      --text:#f7f7f5;
+      --muted:#b8bec8;
+      --soft:#7e8795;
+      --accent:#d6b46a;
+      --accent-2:#f0d99d;
+      --accent-rgb:214,180,106;
+      --line:rgba(255,255,255,.12);
+      --radius:28px;
+      --shadow:0 28px 95px rgba(0,0,0,.42);
+    }
+
+    *{box-sizing:border-box}
+
+    html{min-height:100%}
+
+    body{
+      min-height:100vh;
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(var(--accent-rgb), .24), transparent 34rem),
+        radial-gradient(circle at 8% 18%, rgba(79,209,197,.10), transparent 27rem),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 52%, #06080c 100%);
+      display:grid;
+      place-items:center;
+      padding:28px;
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size:72px 72px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,.55), transparent 72%);
+      opacity:.22;
+      z-index:-1;
+    }
+
+    main{
+      width:min(880px, 100%);
+      text-align:center;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(155deg, rgba(255,255,255,.08), rgba(255,255,255,.028));
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      padding:clamp(34px, 7vw, 72px);
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    main:before{
+      content:"";
+      position:absolute;
+      right:-90px;
+      bottom:-90px;
+      width:240px;
+      height:240px;
+      border-radius:100% 0 0 0;
+      background:radial-gradient(circle at 100% 100%, rgba(var(--accent-rgb), .45), rgba(var(--accent-rgb), .12) 48%, transparent 72%);
+      z-index:-1;
+    }
+
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:38px;
+      text-align:left;
+    }
+
+    .brand-mark{
+      width:58px;
+      height:58px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(var(--accent-rgb),.28);
+      border-radius:18px;
+      background:linear-gradient(145deg, rgba(255,255,255,.105), rgba(255,255,255,.035));
+      box-shadow:0 20px 55px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.14);
+      font-weight:950;
+      font-size:1.55rem;
+      letter-spacing:-.08em;
+      color:var(--accent-2);
+    }
+
+    .brand-name{
+      font-weight:950;
+      letter-spacing:.18em;
+      font-size:.98rem;
+    }
+
+    .brand-line{
+      margin-top:2px;
+      color:var(--accent-2);
+      font-size:.82rem;
+      font-weight:800;
+    }
+
+    .status{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:0 0 20px;
+      color:var(--accent-2);
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.74rem;
+      font-weight:900;
+    }
+
+    .status:before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(var(--accent-rgb),.14);
+    }
+
+    h1{
+      margin:0 0 22px;
+      font-size:clamp(2.25rem, 6vw, 5.2rem);
+      line-height:.95;
+      letter-spacing:-.07em;
+      text-wrap:balance;
+    }
+
+    p{
+      margin:0 auto;
+      max-width:660px;
+      color:var(--muted);
+      font-size:clamp(1.05rem, 1.8vw, 1.28rem);
+    }
+
+    .note{
+      margin-top:30px;
+      padding:18px 20px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      color:var(--soft);
+      font-size:.94rem;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+    }
+
+    footer{
+      margin-top:34px;
+      color:var(--soft);
+      font-size:.88rem;
+    }
+
+    a{color:var(--accent-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    @media(max-width:620px){
+      body{padding:18px}
+      main{padding:30px 22px}
+      .brand{margin-bottom:30px}
+      .brand-mark{width:52px;height:52px;border-radius:16px}
+      h1{font-size:clamp(2.2rem, 13vw, 3.8rem)}
+      .note{border-radius:22px}
+    }
+  </style>
+</head>
+<body>
+  <main aria-labelledby="page-title">
+    <div class="brand" aria-label="TRISSI">
+      <div class="brand-mark" aria-hidden="true">T</div>
+      <div>
+        <div class="brand-name">TRISSI</div>
+        <div class="brand-line">Problem? Hol dir einen Trissi.</div>
+      </div>
+    </div>
+
+    <div class="status">Technischer Hinweis</div>
+
+    <h1 id="page-title">Wir sind gleich wieder da.</h1>
+
+    <p>
+      Die TRISSI Website ist aktuell wegen technischer Probleme vorübergehend nicht erreichbar.
+      Wir arbeiten bereits daran, die Seite so schnell wie möglich wieder verfügbar zu machen.
+    </p>
+
+    <div class="note">Vielen Dank für dein Verständnis.</div>
+
+    <footer>TRISSI · Technische, digitale und individuelle Lösungen</footer>
+  </main>
+</body>
+</html>
