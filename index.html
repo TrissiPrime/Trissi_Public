@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TRISSI startet am 01.07.</title>
-  <meta name="description" content="TRISSI startet am 01.07. Problem? Hol dir einen Trissi.">
+  <title>TRISSI öffnet am 01.07.</title>
+  <meta name="description" content="TRISSI öffnet am 01.07. für technische, digitale und individuelle Lösungen. Problem? Hol dir einen Trissi.">
   <meta name="robots" content="index, follow">
   <style>
     :root{
@@ -293,12 +293,50 @@
       font-size:clamp(1.08rem,1.8vw,1.32rem);
     }
 
+    .lead .accent{
+      color:var(--accent-2);
+      font-weight:900;
+    }
+
     .mystery-line{
       margin-top:18px;
       max-width:640px;
       color:var(--soft);
       font-size:.98rem;
       font-weight:750;
+    }
+
+    .teaser-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      max-width:640px;
+      margin-top:24px;
+    }
+
+    .teaser-item{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+      padding:14px 13px;
+      box-shadow:0 14px 38px rgba(0,0,0,.18);
+    }
+
+    .teaser-item strong{
+      display:block;
+      color:var(--accent-2);
+      font-size:.85rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .teaser-item span{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-size:.82rem;
+      font-weight:720;
+      line-height:1.35;
     }
 
     .actions{
@@ -704,6 +742,10 @@
 
       .lead{font-size:1.04rem}
 
+      .teaser-grid{
+        grid-template-columns:1fr;
+      }
+
       .actions{flex-direction:column}
       .pill{width:100%}
 
@@ -776,31 +818,47 @@
         </div>
       </a>
 
-      <div class="status-badge">Signal erkannt · 01.07.</div>
+      <div class="status-badge">Noch nicht online · 01.07.</div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
         <div class="copy">
-          <div class="eyebrow">Etwas startet</div>
+          <div class="eyebrow">Etwas Neues entsteht</div>
 
           <h1 id="page-title">
-            Am <span class="accent">01.07.</span><br>
-            wird TRISSI aktiv.
+            Du hast ein Problem<br>
+            und weißt nicht weiter?
           </h1>
 
           <p class="lead">
-            Noch ist es ruhig. Im Hintergrund verbinden sich Engineering, Digital Solutions und Data
-            zu einem System für individuelle Lösungen.
+            Ab dem <span class="accent">01.07.</span> entsteht hier ein neuer Anlaufpunkt für
+            Ideen, Aufgaben und Probleme, bei denen man allein nicht direkt weiterkommt.
           </p>
 
           <p class="mystery-line">
-            Kein Shop. Keine Schablone. Ein neuer Anlaufpunkt für Probleme, die nicht in Standardlösungen passen.
+            Was genau macht TRISSI? Konstruktion, digitale Lösungen, Daten, praktische Umsetzung?
+            Vielleicht alles davon. Vielleicht genau die Verbindung, die deinem Problem bisher fehlt.
           </p>
 
+          <div class="teaser-grid" aria-label="TRISSI Ausblick">
+            <div class="teaser-item">
+              <strong>Fragen</strong>
+              <span>Was steckt wirklich dahinter?</span>
+            </div>
+            <div class="teaser-item">
+              <strong>Finden</strong>
+              <span>Welche Idee bringt Bewegung rein?</span>
+            </div>
+            <div class="teaser-item">
+              <strong>Machen</strong>
+              <span>Aus einem losen Problem wird ein nächster Schritt.</span>
+            </div>
+          </div>
+
           <div class="actions" aria-label="TRISSI Hinweis">
-            <span class="pill primary">Problem? Hol dir einen Trissi.</span>
-            <span class="pill">Engineering · Digital Solutions · Data</span>
+            <span class="pill primary">Sei gespannt, was TRISSI möglich macht.</span>
+            <span class="pill">Start am 01.07.</span>
           </div>
 
           <div class="countdown" aria-label="Countdown bis zum Start">
@@ -843,13 +901,13 @@
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL8AAADgCAYAAABSMrckAAAEoUlEQVR4nO3d2XLaShRAUXDl/3+Z++RcDzgG1Jp6r/WUuFyxFPZpNaOvt9vtcsfdL8LJXT/+5e3ONwifWX1q+2v8wmd2fxt/u/dFmNztcvk/fuFTc7u354cE8ZP1drHlIcrKT5b4yRI/WeInS/xkiZ8s8ZMlfrLET9afgf/W9fdvgSGGvCrBys8ZDVloR8Vv1ed0rPxkiZ8s8ZMlfrLET5b4yRI/WeInS/xkiZ8s8ZMlfrLET5b4yRI/WeInS/xkiZ8s8ZM1Kn6f8c/pWPk5oyGL7cjP7Smu/kf51Iri//1iI+Mveo9ujyEQ/EK2PWPcLtvGKPwBxD/WFlEKfxDxn4vwBxL/eAI9CfGTJf7zcEUZTPxkiZ+st8txnqWETVn5yRI/Vdf3+G19yPm48hsAKq6Xy/dtjwFgdn8bv7fnNwDM6Hr50vZPr+evDkDlWdTq7fuJR3s+K0RROMeHiL9F+B+InyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEv93Psk4Qvxkif8+q3+A+H9mACYn/n/79kvMmIf4H2MIJiT+5xiAiYj/ea4CkxD/6wzByYl/OQNwUuIfw1XghP7sfQCTMQAnYuUnS/xkiZ8s8ZMlfrLET5aHOr+7ffizhy4nZuX/t9vl8zAwEfE/xgBMSPyPcxWYjPifZwgmIf7XGYCTE/8yrgInJv4xDMEJiX8sA3Ai4h/PAJyE+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZIn/u+veB8A2xE+W+MkSf4ft3Bfiv08oAeL/2UwDMNO5DCP+f5shmhnOYRV/9j6AE3iP57brUTxP9L8Q/+POMgSif5Btz/OOHNeRj+1wrPyvOdpVQPQvEP8yew+B6Bew7Rlj6wivO/zM6Yh/nK2CFP0gtj3jrRWn6Aez8pMlfrLET5b4yXKH9/Nj9JU7lcVz/qYa/09PSs0cxW/nPNv5/qoY/6PPxs4SRe18H1bb87/yMoSjvH7nWbdL63yfVop/yY36akh7OdOx7qYU/whHH4JRx3fkcxymsucffWMebX+ciHU0K/8ye0d39CvRoYl/ub0CXPtnTj9UlW3PFrbaCk0f5VbEP95aQyD6wWx71jMqVvv6lYh/XUvDFf2KbHu2IeIDsvKTJX6yxE+W+MkSP1niJ0v8ZImfLPGTJX6yxE+W+MkSP1niJ0v8ZImfLG9m2c4z7+n15pcNWPm38eyb2f22xQ1Y+de1NOC9f8/v1MS/jtGrtiFYgW3PWGtvV2yFBhL/OFuF6f7AILY9y+0V4tpboekHrLLyr3FDHmUFPspxnE4l/pGOGtsRj+nQxP+cowc2ajCPfp5DlOJfcoMedbX/yZLjPdN5LlKK/3LpPdP6yvlmFB/teeRRkpkiePRRoZnO+SH/AcJ+ZP9isKrAAAAAAElFTkSuQmCC" alt="">
             </div>
             <div class="date"><span>01.07.</span></div>
-            <p>TRISSI geht online.</p>
+            <p>Dein Lösungsweg startet.</p>
           </div>
 
           <div class="code-lines" aria-hidden="true">
-            <span>&gt; lösungssystem initialisiert</span>
+            <span>&gt; lösungsraum wird vorbereitet</span>
             <span>&gt; engineering · digital solutions · data</span>
-            <span>&gt; status: bereit für echte probleme</span>
+            <span>&gt; status: bald mehr als eine idee</span>
           </div>
         </aside>
       </section>
@@ -860,7 +918,6 @@
       <div>Launch-Seite ohne externe Dienste</div>
     </footer>
   </div>
-
   <script>
     (function(){
       const target = new Date("2026-07-01T00:00:00+02:00").getTime();
